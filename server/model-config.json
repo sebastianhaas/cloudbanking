@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ]
+  },
+  "User": {
+    "dataSource": "mongo"
+  },
+  "AccessToken": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Account": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "PersistedBankingModel": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Transaction": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Location": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Split": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "InvoiceSnap": {
+    "dataSource": "invoices",
+    "public": true
+  }
+}

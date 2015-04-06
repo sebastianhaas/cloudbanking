@@ -1,0 +1,11 @@
+{
+  "name": "InvoiceSnap",
+  "plural": "InvoiceSnaps",
+  "base": "PersistedBankingModel",
+  "idInjection": true,
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

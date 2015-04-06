@@ -1,0 +1,27 @@
+{
+  "name": "Location",
+  "base": "PersistedBankingModel",
+  "idInjection": true,
+  "properties": {
+    "accuracy": {
+      "type": "number"
+    },
+    "altitude": {
+      "type": "number"
+    },
+    "bearing": {
+      "type": "number"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "position": {
+      "type": "geopoint",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

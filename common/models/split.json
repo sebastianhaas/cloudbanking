@@ -1,0 +1,35 @@
+{
+  "name": "Split",
+  "plural": "Splits",
+  "base": "PersistedBankingModel",
+  "idInjection": true,
+  "properties": {
+    "amount": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "required": true,
+      "default": "new"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transaction": {
+      "type": "belongsTo",
+      "model": "Transaction",
+      "foreignKey": ""
+    },
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

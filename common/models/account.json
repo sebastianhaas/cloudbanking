@@ -1,0 +1,39 @@
+{
+  "name": "Account",
+  "plural": "Accounts",
+  "base": "PersistedBankingModel",
+  "idInjection": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "isContainer": {
+      "type": "boolean",
+      "required": true
+    },
+    "isRoot": {
+      "type": "boolean",
+      "required": true
+    },
+    "code": {
+      "type": "string"
+    },
+    "tags": {
+      "type": [
+        "string"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
