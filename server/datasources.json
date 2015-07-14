@@ -5,12 +5,13 @@
   },
   "mongo": {
     "name": "mongo",
-    "connector": "mongodb"
+    "connector": "mongodb",
+    "database": "cloudbanking"
   },
   "invoices": {
     "name": "invoices",
     "connector": "loopback-component-storage",
     "provider": "filesystem",
-    "root": "C:/ProgramData/Nodebanking/Invoices"
+    "root": "invoices/"
   }
 }

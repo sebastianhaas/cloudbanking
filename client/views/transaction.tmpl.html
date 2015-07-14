@@ -1,0 +1,31 @@
+<h1>Transaction list</h1>
+
+
+<div layout="row" layout-sm="column">
+    <div flex>
+
+        <form name="transactionForm" novalidate ng-submit="addTransaction()">
+            <div class="form-group"
+                 ng-class="{'has-error': transactionForm.content.$invalid
+        && transactionForm.content.$dirty}">
+                <md-input-container>
+                    <label>Title</label>
+                    <input type="text" class="form-control focus" name="content"
+                           placeholder="Content" autocomplete="off" required
+                           ng-model="newTodo.content">
+                    <span class="has-error control-label" ng-show="
+                        transactionForm.content.$invalid && transactionForm.content.$dirty">
+                      Content is required.
+                    </span>
+                </md-input-container>
+            </div>
+            <button class="btn btn-default" ng-disabled="transactionForm.$invalid">Add</button>
+        </form>
+    </div>
+    <div flex>
+        <div class="list-group">
+            <a class="list-group-item" ng-repeat="transaction in transactions">{{transaction.content}}&nbsp;</a>
+        </div>
+    </div>
+</div>
+
