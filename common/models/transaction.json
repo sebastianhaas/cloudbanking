@@ -22,7 +22,17 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "splits": {
+      "type": "embedsMany",
+      "model": "Split",
+      "property": "splits",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
   "acls": [],
   "methods": []
 }

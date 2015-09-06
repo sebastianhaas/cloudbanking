@@ -19,15 +19,9 @@
   },
   "validations": [],
   "relations": {
-    "transaction": {
-      "type": "belongsTo",
-      "model": "Transaction",
-      "foreignKey": ""
-    },
     "account": {
       "type": "belongsTo",
-      "model": "Account",
-      "foreignKey": ""
+      "model": "Account"
     }
   },
   "acls": [],

@@ -8,7 +8,8 @@
     ]
   },
   "User": {
-    "dataSource": "mongo"
+    "dataSource": "mongo",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "mongo",
@@ -43,7 +44,7 @@
     "public": false
   },
   "Split": {
-    "dataSource": "mongo",
+    "dataSource": "transient",
     "public": true
   },
   "InvoiceSnap": {
