@@ -2,30 +2,44 @@
 
 
 <div layout="row" layout-sm="column">
-    <div flex>
-
-        <form name="transactionForm" novalidate ng-submit="addTransaction()">
-            <div class="form-group"
-                 ng-class="{'has-error': transactionForm.content.$invalid
+  <div flex>
+    <form name="transactionForm" novalidate ng-submit="addTransaction()">
+      <div class="form-group"
+           ng-class="{'has-error': transactionForm.content.$invalid
         && transactionForm.content.$dirty}">
-                <md-input-container>
-                    <label>Title</label>
-                    <input type="text" class="form-control focus" name="content"
-                           placeholder="Content" autocomplete="off" required
-                           ng-model="newTodo.content">
+        <md-input-container>
+          <label>Title</label>
+          <input type="text" class="form-control focus" name="content"
+                 placeholder="Content" autocomplete="off" required
+                 ng-model="newTodo.content">
                     <span class="has-error control-label" ng-show="
                         transactionForm.content.$invalid && transactionForm.content.$dirty">
                       Content is required.
                     </span>
-                </md-input-container>
-            </div>
-            <button class="btn btn-default" ng-disabled="transactionForm.$invalid">Add</button>
-        </form>
-    </div>
-    <div flex>
-        <div class="list-group">
-            <a class="list-group-item" ng-repeat="transaction in transactions">{{transaction.text}}&nbsp;</a>
-        </div>
-    </div>
+        </md-input-container>
+      </div>
+      <md-button class="md-raised" ng-disabled="transactionForm.$invalid">Add</md-button>
+    </form>
+  </div>
+  <div flex>
+    <md-data-table-container>
+      <table md-data-table md-row-select="selected" md-progress="deferred">
+        <thead md-order="query.order" md-trigger="onOrderChange">
+        <tr>
+          <th name="Date"></th>
+          <th name="Number" unit="EUR"></th>
+          <th name="Text"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr md-auto-select ng-repeat="transaction in transactions">
+          <td>{{transaction.date}}</td>
+          <td>{{transaction.number}}</td>
+          <td>{{transaction.text}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </md-data-table-container>
+  </div>
 </div>
 
